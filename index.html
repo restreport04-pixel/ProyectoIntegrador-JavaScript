@@ -1,14 +1,641 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de Coworking</title>
 </head>
 <body>
 
-    
-    <script src="js/script.js"></script>
+<header>
+  <h1>Sistema de Coworking</h1>
+  <p>Reserva tu espacio de trabajo por hora, por día o por mes.</p>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#espacios">Espacios</a></li>
+      <li><a href="#tarifas">Tarifas</a></li>
+      <li><a href="#registro">Registro de usuario</a></li>
+      <li><a href="#login">Iniciar sesión</a></li>
+      <li><a href="#reservar">Crear reserva</a></li>
+      <li><a href="#consultar">Consultar reservas</a></li>
+      <li><a href="#preguntas">Preguntas frecuentes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
+
+<main>
+
+<section id="inicio">
+  <h2>Bienvenido</h2>
+  <p>Nuestro coworking ofrece puestos de trabajo, escritorios fijos, salas de reuniones y oficinas privadas para freelancers, estudiantes, emprendedores y equipos pequeños.</p>
+  <p>Con este sistema puedes:</p>
+  <ol>
+    <li>Registrarte como usuario.</li>
+    <li>Iniciar sesión con tu correo y contraseña.</li>
+    <li>Consultar las tarifas por hora, por día y por mes.</li>
+    <li>Crear una reserva en el espacio que prefieras.</li>
+    <li>Consultar y revisar tus reservas.</li>
+  </ol>
+  <p><b>Horario de atención:</b> lunes a viernes de 7:00 a.m. a 10:00 p.m. y sábados de 8:00 a.m. a 6:00 p.m.</p>
+</section>
+
+<hr>
+
+<section id="espacios">
+  <h2>Nuestros espacios</h2>
+
+  <h3>Puesto flexible</h3>
+  <p>Mesa compartida con internet de alta velocidad, café y zona común. Se ocupa el puesto que esté libre. Capacidad: 10 puestos.</p>
+
+  <h3>Escritorio fijo</h3>
+  <p>Un escritorio asignado solo para ti, con cajonera con llave y lámpara. Capacidad: 6 escritorios.</p>
+
+  <h3>Sala de reuniones</h3>
+  <p>Sala para hasta 8 personas con pantalla, tablero y aire acondicionado. Capacidad: 2 salas.</p>
+
+  <h3>Oficina privada</h3>
+  <p>Oficina cerrada para equipos de 2 a 4 personas, con puerta propia y buena iluminación. Capacidad: 3 oficinas.</p>
+
+  <h3>Servicios incluidos en todos los espacios</h3>
+  <ul>
+    <li>Internet por fibra óptica</li>
+    <li>Café, té y agua</li>
+    <li>Zona de descanso</li>
+    <li>Impresión básica</li>
+    <li>Seguridad y control de acceso</li>
+    <li>Baños y cocineta</li>
+  </ul>
+</section>
+
+<hr>
+
+<section id="tarifas">
+  <h2>Tarifas (en pesos colombianos)</h2>
+  <p>Los valores se cobran según la modalidad de la reserva: por hora, por día o por mes.</p>
+
+  <table border="1" cellpadding="6" cellspacing="0">
+    <caption>Valores por espacio</caption>
+    <thead>
+      <tr>
+        <th>Espacio</th>
+        <th>Valor por hora</th>
+        <th>Valor por día</th>
+        <th>Valor por mes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Puesto flexible</td>
+        <td>$8.000</td>
+        <td>$35.000</td>
+        <td>$450.000</td>
+      </tr>
+      <tr>
+        <td>Escritorio fijo</td>
+        <td>$12.000</td>
+        <td>$55.000</td>
+        <td>$750.000</td>
+      </tr>
+      <tr>
+        <td>Sala de reuniones</td>
+        <td>$45.000</td>
+        <td>$280.000</td>
+        <td>$3.200.000</td>
+      </tr>
+      <tr>
+        <td>Oficina privada</td>
+        <td>$60.000</td>
+        <td>$300.000</td>
+        <td>$4.500.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Ejemplos de cálculo</h3>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Reserva</th>
+        <th>Cálculo</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Puesto flexible, 3 horas</td>
+        <td>3 x $8.000</td>
+        <td>$24.000</td>
+      </tr>
+      <tr>
+        <td>Escritorio fijo, 5 días</td>
+        <td>5 x $55.000</td>
+        <td>$275.000</td>
+      </tr>
+      <tr>
+        <td>Sala de reuniones, 2 horas</td>
+        <td>2 x $45.000</td>
+        <td>$90.000</td>
+      </tr>
+      <tr>
+        <td>Oficina privada, 2 meses</td>
+        <td>2 x $4.500.000</td>
+        <td>$9.000.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Notas sobre las tarifas</h3>
+  <ul>
+    <li>La reserva por mes es más económica que reservar 30 días sueltos.</li>
+    <li>Las reservas por hora se hacen entre las 7:00 a.m. y las 9:00 p.m.</li>
+    <li>Los precios pueden cambiar sin previo aviso.</li>
+  </ul>
+</section>
+
+<hr>
+
+<section id="registro">
+  <h2>Registro de usuario</h2>
+  <p>Crea tu cuenta para poder reservar espacios.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Datos personales</legend>
+
+      <p>
+        <label for="reg-nombre">Nombres:</label><br>
+        <input type="text" id="reg-nombre" name="nombres" placeholder="Tus nombres" required>
+      </p>
+
+      <p>
+        <label for="reg-apellido">Apellidos:</label><br>
+        <input type="text" id="reg-apellido" name="apellidos" placeholder="Tus apellidos" required>
+      </p>
+
+      <p>
+        <label for="reg-tipo-doc">Tipo de documento:</label><br>
+        <select id="reg-tipo-doc" name="tipo_documento">
+          <option value="cc">Cédula de ciudadanía</option>
+          <option value="ce">Cédula de extranjería</option>
+          <option value="ti">Tarjeta de identidad</option>
+          <option value="pas">Pasaporte</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="reg-doc">Número de documento:</label><br>
+        <input type="text" id="reg-doc" name="documento" required>
+      </p>
+
+      <p>
+        <label for="reg-nac">Fecha de nacimiento:</label><br>
+        <input type="date" id="reg-nac" name="fecha_nacimiento">
+      </p>
+
+      <p>
+        <label for="reg-tel">Teléfono:</label><br>
+        <input type="tel" id="reg-tel" name="telefono" placeholder="3001234567">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos de la cuenta</legend>
+
+      <p>
+        <label for="reg-correo">Correo electrónico:</label><br>
+        <input type="email" id="reg-correo" name="correo" placeholder="nombre@correo.com" required>
+      </p>
+
+      <p>
+        <label for="reg-clave">Contraseña (mínimo 6 caracteres):</label><br>
+        <input type="password" id="reg-clave" name="clave" minlength="6" required>
+      </p>
+
+      <p>
+        <label for="reg-clave2">Confirmar contraseña:</label><br>
+        <input type="password" id="reg-clave2" name="clave2" minlength="6" required>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Perfil</legend>
+
+      <p>¿A qué te dedicas?</p>
+      <p>
+        <input type="radio" id="perfil-free" name="perfil" value="freelance">
+        <label for="perfil-free">Freelancer</label><br>
+        <input type="radio" id="perfil-est" name="perfil" value="estudiante">
+        <label for="perfil-est">Estudiante</label><br>
+        <input type="radio" id="perfil-emp" name="perfil" value="emprendedor">
+        <label for="perfil-emp">Emprendedor</label><br>
+        <input type="radio" id="perfil-otro" name="perfil" value="otro">
+        <label for="perfil-otro">Otro</label>
+      </p>
+
+      <p>¿Cómo nos conociste?</p>
+      <p>
+        <input type="checkbox" id="con-redes" name="conocio" value="redes">
+        <label for="con-redes">Redes sociales</label><br>
+        <input type="checkbox" id="con-amigo" name="conocio" value="amigo">
+        <label for="con-amigo">Recomendación de un amigo</label><br>
+        <input type="checkbox" id="con-web" name="conocio" value="web">
+        <label for="con-web">Búsqueda en internet</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <input type="checkbox" id="reg-terminos" name="terminos" required>
+      <label for="reg-terminos">Acepto los términos y condiciones y el tratamiento de mis datos.</label>
+    </p>
+
+    <p>
+      <input type="submit" value="Crear cuenta">
+      <input type="reset" value="Borrar datos">
+    </p>
+  </form>
+</section>
+
+<hr>
+
+<section id="login">
+  <h2>Iniciar sesión</h2>
+  <p>Si ya tienes una cuenta, ingresa tus datos.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Ingreso</legend>
+
+      <p>
+        <label for="log-correo">Correo electrónico:</label><br>
+        <input type="email" id="log-correo" name="correo" required>
+      </p>
+
+      <p>
+        <label for="log-clave">Contraseña:</label><br>
+        <input type="password" id="log-clave" name="clave" required>
+      </p>
+
+      <p>
+        <input type="checkbox" id="log-recordar" name="recordar">
+        <label for="log-recordar">Recordarme en este equipo</label>
+      </p>
+
+      <p>
+        <input type="submit" value="Iniciar sesión">
+      </p>
+    </fieldset>
+  </form>
+
+  <p><a href="#registro">¿No tienes cuenta? Regístrate aquí</a></p>
+  <p><a href="#contacto">¿Olvidaste tu contraseña? Escríbenos</a></p>
+</section>
+
+<hr>
+
+<section id="reservar">
+  <h2>Crear reserva</h2>
+  <p>Para reservar debes haber iniciado sesión. Completa el formulario con los datos de tu reserva.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Datos de la reserva</legend>
+
+      <p>
+        <label for="res-correo">Correo del usuario:</label><br>
+        <input type="email" id="res-correo" name="correo" required>
+      </p>
+
+      <p>
+        <label for="res-espacio">Espacio:</label><br>
+        <select id="res-espacio" name="espacio" required>
+          <option value="">Selecciona un espacio</option>
+          <option value="flexible">Puesto flexible</option>
+          <option value="fijo">Escritorio fijo</option>
+          <option value="sala">Sala de reuniones</option>
+          <option value="oficina">Oficina privada</option>
+        </select>
+      </p>
+
+      <p>Modalidad de la reserva:</p>
+      <p>
+        <input type="radio" id="mod-hora" name="modalidad" value="hora" checked>
+        <label for="mod-hora">Por hora</label><br>
+        <input type="radio" id="mod-dia" name="modalidad" value="dia">
+        <label for="mod-dia">Por día</label><br>
+        <input type="radio" id="mod-mes" name="modalidad" value="mes">
+        <label for="mod-mes">Por mes</label>
+      </p>
+
+      <p>
+        <label for="res-fecha">Fecha de inicio:</label><br>
+        <input type="date" id="res-fecha" name="fecha" required>
+      </p>
+
+      <p>
+        <label for="res-hora">Hora de inicio (solo para reservas por hora):</label><br>
+        <input type="time" id="res-hora" name="hora" min="07:00" max="21:00">
+      </p>
+
+      <p>
+        <label for="res-cantidad">Cantidad (horas, días o meses según la modalidad):</label><br>
+        <input type="number" id="res-cantidad" name="cantidad" min="1" max="30" value="1" required>
+      </p>
+
+      <p>
+        <label for="res-personas">Número de personas:</label><br>
+        <input type="number" id="res-personas" name="personas" min="1" max="8" value="1">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Servicios adicionales</legend>
+      <p>
+        <input type="checkbox" id="ad-proyector" name="adicionales" value="proyector">
+        <label for="ad-proyector">Proyector</label><br>
+        <input type="checkbox" id="ad-cafe" name="adicionales" value="cafe">
+        <label for="ad-cafe">Servicio de café</label><br>
+        <input type="checkbox" id="ad-impresion" name="adicionales" value="impresion">
+        <label for="ad-impresion">Impresiones</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <label for="res-obs">Observaciones:</label><br>
+      <textarea id="res-obs" name="observaciones" rows="4" cols="40" placeholder="Escribe aquí si necesitas algo especial"></textarea>
+    </p>
+
+    <p>
+      <input type="submit" value="Confirmar reserva">
+      <input type="reset" value="Limpiar formulario">
+    </p>
+  </form>
+
+  <h3>Condiciones de la reserva</h3>
+  <ul>
+    <li>No se puede reservar en fechas pasadas.</li>
+    <li>Si el espacio no tiene cupo en ese horario, la reserva no se puede confirmar.</li>
+    <li>Puedes cancelar tu reserva hasta 2 horas antes de la hora de inicio.</li>
+    <li>El pago se realiza en recepción o por transferencia.</li>
+  </ul>
+</section>
+
+<hr>
+
+<section id="consultar">
+  <h2>Consultar reservas</h2>
+  <p>Busca las reservas de un usuario por correo, fecha o estado.</p>
+
+  <form action="#" method="get">
+    <fieldset>
+      <legend>Filtros de búsqueda</legend>
+
+      <p>
+        <label for="con-correo">Correo del usuario:</label><br>
+        <input type="email" id="con-correo" name="correo">
+      </p>
+
+      <p>
+        <label for="con-desde">Desde:</label><br>
+        <input type="date" id="con-desde" name="desde">
+      </p>
+
+      <p>
+        <label for="con-hasta">Hasta:</label><br>
+        <input type="date" id="con-hasta" name="hasta">
+      </p>
+
+      <p>
+        <label for="con-espacio">Espacio:</label><br>
+        <select id="con-espacio" name="espacio">
+          <option value="todos">Todos</option>
+          <option value="flexible">Puesto flexible</option>
+          <option value="fijo">Escritorio fijo</option>
+          <option value="sala">Sala de reuniones</option>
+          <option value="oficina">Oficina privada</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="con-estado">Estado:</label><br>
+        <select id="con-estado" name="estado">
+          <option value="todos">Todos</option>
+          <option value="confirmada">Confirmada</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="cancelada">Cancelada</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="submit" value="Buscar reservas">
+      </p>
+    </fieldset>
+  </form>
+
+  <h3>Mis reservas</h3>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <caption>Ejemplo de listado de reservas</caption>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Espacio</th>
+        <th>Modalidad</th>
+        <th>Inicio</th>
+        <th>Fin</th>
+        <th>Total</th>
+        <th>Estado</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R-001</td>
+        <td>Puesto flexible</td>
+        <td>3 horas</td>
+        <td>10/11/2026 9:00 a.m.</td>
+        <td>10/11/2026 12:00 p.m.</td>
+        <td>$24.000</td>
+        <td>Confirmada</td>
+        <td><a href="#consultar">Cancelar</a></td>
+      </tr>
+      <tr>
+        <td>R-002</td>
+        <td>Escritorio fijo</td>
+        <td>5 días</td>
+        <td>16/11/2026</td>
+        <td>21/11/2026</td>
+        <td>$275.000</td>
+        <td>Confirmada</td>
+        <td><a href="#consultar">Cancelar</a></td>
+      </tr>
+      <tr>
+        <td>R-003</td>
+        <td>Sala de reuniones</td>
+        <td>2 horas</td>
+        <td>18/11/2026 3:00 p.m.</td>
+        <td>18/11/2026 5:00 p.m.</td>
+        <td>$90.000</td>
+        <td>Pendiente</td>
+        <td><a href="#consultar">Cancelar</a></td>
+      </tr>
+      <tr>
+        <td>R-004</td>
+        <td>Oficina privada</td>
+        <td>1 mes</td>
+        <td>01/12/2026</td>
+        <td>01/01/2027</td>
+        <td>$4.500.000</td>
+        <td>Confirmada</td>
+        <td><a href="#consultar">Cancelar</a></td>
+      </tr>
+      <tr>
+        <td>R-005</td>
+        <td>Puesto flexible</td>
+        <td>1 día</td>
+        <td>03/11/2026</td>
+        <td>04/11/2026</td>
+        <td>$35.000</td>
+        <td>Cancelada</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Disponibilidad de hoy</h3>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Espacio</th>
+        <th>Capacidad</th>
+        <th>Ocupados</th>
+        <th>Disponibles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Puesto flexible</td>
+        <td>10</td>
+        <td>6</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Escritorio fijo</td>
+        <td>6</td>
+        <td>5</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Sala de reuniones</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Oficina privada</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr>
+
+<section id="preguntas">
+  <h2>Preguntas frecuentes</h2>
+
+  <details>
+    <summary>¿Necesito registrarme para reservar?</summary>
+    <p>Sí. Debes crear una cuenta e iniciar sesión para poder hacer y consultar tus reservas.</p>
+  </details>
+
+  <details>
+    <summary>¿Puedo reservar por hora, por día y por mes?</summary>
+    <p>Sí. Al crear la reserva eliges la modalidad y la cantidad de tiempo que necesitas.</p>
+  </details>
+
+  <details>
+    <summary>¿Cómo se calcula el total?</summary>
+    <p>Se multiplica el valor de la modalidad (hora, día o mes) por la cantidad reservada.</p>
+  </details>
+
+  <details>
+    <summary>¿Qué pasa si no hay cupo?</summary>
+    <p>El sistema no permite confirmar la reserva. Puedes probar con otra fecha, otro horario u otro espacio.</p>
+  </details>
+
+  <details>
+    <summary>¿Puedo cancelar mi reserva?</summary>
+    <p>Sí, hasta 2 horas antes del inicio, desde la sección Consultar reservas.</p>
+  </details>
+
+  <details>
+    <summary>¿Cómo puedo pagar?</summary>
+    <p>En recepción o por transferencia bancaria.</p>
+  </details>
+</section>
+
+<hr>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>¿Tienes dudas? Escríbenos y te respondemos lo antes posible.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Envíanos un mensaje</legend>
+
+      <p>
+        <label for="ct-nombre">Nombre:</label><br>
+        <input type="text" id="ct-nombre" name="nombre" required>
+      </p>
+
+      <p>
+        <label for="ct-correo">Correo:</label><br>
+        <input type="email" id="ct-correo" name="correo" required>
+      </p>
+
+      <p>
+        <label for="ct-asunto">Asunto:</label><br>
+        <select id="ct-asunto" name="asunto">
+          <option value="reservas">Reservas</option>
+          <option value="tarifas">Tarifas</option>
+          <option value="cuenta">Problemas con mi cuenta</option>
+          <option value="otro">Otro</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="ct-mensaje">Mensaje:</label><br>
+        <textarea id="ct-mensaje" name="mensaje" rows="5" cols="40" required></textarea>
+      </p>
+
+      <p>
+        <input type="submit" value="Enviar mensaje">
+      </p>
+    </fieldset>
+  </form>
+
+  <h3>Datos del coworking</h3>
+  <ul>
+    <li>Dirección: Calle 113aa #64bb - 007 (0201)</li>
+    <li>Teléfono: 3145324303</li>
+    <li>Correo: coworking_grupo1@gmail.com</li>
+  </ul>
+</section>
+
+</main>
+
+<hr>
+
+<footer>
+  <p><a href="#inicio">Volver al inicio</a></p>
+  <p>Sistema de Coworking - Proyecto final</p>
+</footer>
+
 </body>
 </html>
